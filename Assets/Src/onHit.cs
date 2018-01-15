@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class onHit : MonoBehaviour {
 
-    Game Script;
+    Game gameScript;
     public GameObject Camera;
     public int id;
 
     void Awake()
     {
-        Script = Camera.GetComponent<Game>();
+        // Get a reference to the main Game Script 
+        gameScript = Camera.GetComponent<Game>();
     }
 
     void OnMouseDown()
     {
-        Script.drawCell(gameObject, id);
+        // Draw it
+        gameScript.drawCell(gameObject, id);
     }
 }

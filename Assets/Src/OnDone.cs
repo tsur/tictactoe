@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class OnDone : MonoBehaviour {
 
-    Game Script;
+    Game gameScript;
     public GameObject Camera;
 
     void Awake()
     {
-        Script = Camera.GetComponent<Game>();
+        // Get a reference to the main Game Script 
+        gameScript = Camera.GetComponent<Game>();
     }
 
     void OnMouseDown()
     {
-        Script.reset();
+        gameScript.reset();
     }
 }
